@@ -17,8 +17,9 @@ function App() {
 					return r.json()
 				}
 			})
-			.then(data => {
-				setWord(data)
+			.then(word => {
+				setWord(word)
+				console.dir(word);
 			})
 			.catch(err => console.warn(err));
 	}

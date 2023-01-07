@@ -2,7 +2,8 @@
 const Phonetic = ({ word }) => {
   return (
     <div>
-     Phonetic: {word.phonetic}
+      <li> Phonetic text :  {word.phonetics[2].text}</li>
+      <li>Phonetic audio link:  {word.phonetics[0].audio}</li>
     </div>
   )
 }

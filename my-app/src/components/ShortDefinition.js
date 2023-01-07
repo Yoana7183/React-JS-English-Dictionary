@@ -2,7 +2,7 @@
 const ShortDefinition = ({word}) => {
   return (
     <div>
-      Definition: {word.definition}
+      Definition: {word.definitions}
     </div>
   )
 }

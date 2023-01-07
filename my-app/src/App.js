@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Word from "./components/Word";
+import Input from "./components/Input";
+import Header from "./components/Header";
+
 
 function App() {
+   
+
+	let url = 'https://api.dictionaryapi.dev/api/v2/entries/en/hello'
+	let [word, setWord] = useState([])
+
+	let fetchWord = () => {
+		fetch(url)
+			.then(r => {
+				if (r.ok) {
+					return r.json()
+				}
+			})
+			.then(data => {
+				setWord(data)
+			})
+			.catch(err => console.warn(err));
+	}
+
+	useEffect(fetchWord,[])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Input />
+      <Word word={word} />
+
     </div>
   );
 }

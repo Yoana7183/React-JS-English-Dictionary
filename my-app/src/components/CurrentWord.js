@@ -1,9 +1,8 @@
 
-
 const CurrentWord = ({ word }) => {
   return (
     <div>
-      Word: {word.word}
+     {word.word}
     </div>
   )
 }

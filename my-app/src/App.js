@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Word from "./components/Word";
 import Input from "./components/Input";
 import Header from "./components/Header";
@@ -7,21 +7,21 @@ import Header from "./components/Header";
 function App() {
 	let [word, setWord] = useState([])
 
-	const fetchWord = (value) => {
-		var url = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
-		var urle = url + value
-		fetch(urle)
-			.then(r => {
-				if (r.ok) {
-					return r.json()
-				}
-			})
-			.then(word => {
-				setWord(word)
-				console.dir(word);
-			})
-			.catch(err => console.warn(err));
+	var url = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
+
+	async function fetchWord(value) {
+		await fetch(url + value)
+			.then(response => response.json())
+			.then(data => setWord(data))
+
 	}
+	console.log(word);
+
+
+
+	// useEffect(() => {
+	// 	fetchWord(value);
+	// }, []);
 
 
 
@@ -30,7 +30,6 @@ function App() {
 			<Header />
 			<Input fetchWord={fetchWord} />
 			<Word word={word} />
-
 		</div>
 	);
 }

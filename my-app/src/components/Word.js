@@ -15,13 +15,12 @@ const Word = ({ word }) => {
                 return (
                     <li className='wordData' key={index}>
                         <CurrentWord word={word} />
-                        <Phonetic word={word} />
-                        <NounDefinition word={word} />
+                           <Phonetic word={word} /> 
+                          {/* <NounDefinition word={word} />
                         <VerbDefinition word={word} />
-                        <InterjectionDefinition word={word} />
-                        <Source word = {word}/>
-
-                    </li>
+                        <InterjectionDefinition word={word} /> 
+                        <Source word={word} />    */}
+                    </li> 
                 );
 
             })}

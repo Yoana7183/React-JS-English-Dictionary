@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Word from "./components/Word";
 import Input from "./components/Input";
 import Header from "./components/Header";
 
 
 function App() {
-   
-
-	let url = 'https://api.dictionaryapi.dev/api/v2/entries/en/hello'
 	let [word, setWord] = useState([])
 
-	let fetchWord = () => {
-		fetch(url)
+	const fetchWord = (value) => {
+		var url = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
+		var urle = url + value
+		fetch(urle)
 			.then(r => {
 				if (r.ok) {
 					return r.json()
@@ -24,16 +23,16 @@ function App() {
 			.catch(err => console.warn(err));
 	}
 
-	useEffect(fetchWord,[])
 
-  return (
-    <div className="App">
-      <Header />
-      <Input />
-      <Word word={word} />
 
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+			<Input fetchWord={fetchWord} />
+			<Word word={word} />
+
+		</div>
+	);
 }
 
 export default App;

@@ -7,6 +7,7 @@ const Input = ({ fetchWord }) => {
   let inputRef = createRef();
   let [value, setValue] = useState("")
 
+
   return (
     <div className="word">
       <input type="text"
@@ -16,12 +17,11 @@ const Input = ({ fetchWord }) => {
         placeholder="Write the word here.."
         value={value}
         onChange={(e) => { setValue(e.target.value) }} />
-        
+
       <button
         className="search-btn"
         onClick={(e) => {
-          fetchWord(value)
-          setValue("")
+          fetchWord(value)   
         }}
         type="button">Search word</button>
     </div>

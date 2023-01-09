@@ -8,10 +8,6 @@ import Source from "./Source"
 import Alert from 'react-bootstrap/Alert';
 
 
-
-
-
-
 const Word = ({ word }) => {
     if (word.title === "No Definitions Found") {
         return (

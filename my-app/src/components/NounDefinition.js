@@ -2,10 +2,15 @@
 const NounDefinition = ({ word }) => {
   let definition = word.meanings[0].definitions[0].definition
 if (definition === undefined) {
-  definition = 'There is no noun definition for this word'
+  return(
+    <div className="noNoun">
+   There is no noun definition for this word
+  </div>
+  )
+ 
 }
   return (
-    <div>
+    <div className="nounDefinition">
         Noun Definition: {definition}
 
     </div>

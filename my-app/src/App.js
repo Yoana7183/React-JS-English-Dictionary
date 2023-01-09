@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Word from "./components/Word";
 import Input from "./components/Input";
 import Header from "./components/Header";
+import './App.css';
 
 
 function App() {
@@ -16,12 +17,6 @@ function App() {
 
 	}
 	console.log(word);
-
-
-
-	// useEffect(() => {
-	// 	fetchWord(value);
-	// }, []);
 
 
 

@@ -1,9 +1,12 @@
-import React from 'react'
 
 const Source = ({ word }) => {
+    let source =word.sourceUrls[0]
+    if(source === undefined){
+        source = 'There is no source information'
+    }
     return (
         <div>
-            Source link : {word.sourceUrls[0]}
+            Source link : {source}
         </div>
     )
 }

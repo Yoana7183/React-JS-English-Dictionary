@@ -5,7 +5,7 @@ const Source = ({ word }) => {
         source = 'There is no source information'
     }
     return (
-        <div>
+        <div className="source">
             Source link : {source}
         </div>
     )

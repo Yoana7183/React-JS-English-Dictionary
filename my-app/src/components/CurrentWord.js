@@ -1,8 +1,8 @@
 
 const CurrentWord = ({ word }) => {
   return (
-    <div>
-     {word.word}
+    <div className="currWord" >
+   Current word:  {word.word}
     </div>
   )
 }

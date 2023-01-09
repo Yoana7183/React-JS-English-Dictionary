@@ -2,7 +2,7 @@
 const VerbDefinition = ({ word }) => {
   if(word.meanings[1] === undefined){
     return(
-      <div>
+      <div className="noVerb">
      There is no verb definition for this word
     </div>
     )
@@ -12,7 +12,7 @@ const VerbDefinition = ({ word }) => {
     definition = 'There is no verb definition for this word'
   }
   return (
-    <div>
+    <div className="verbDefinition">
       Verb Definition:  {definition}
     </div>
   )

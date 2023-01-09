@@ -3,7 +3,7 @@
 const AdjectiveDefinition = ({word}) => {
     if (word.meanings[2] === undefined) {
         return(
-            <div>There is no adjective definition for this word</div>
+            <div className="noAdjective">There is no adjective definition for this word</div>
             
         )
        
@@ -13,7 +13,7 @@ const AdjectiveDefinition = ({word}) => {
       definition = 'There is no adjective definition for this word'
     }
     return (
-      <div>
+      <div className="adjective">
         Adjective definition:  {definition}
       </div>
     )

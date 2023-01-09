@@ -1,8 +1,10 @@
 
 const CurrentWord = ({ word }) => {
+  let currentWword = word.word
+ 
   return (
     <div className="currWord" >
-   Current word:  {word.word}
+   Current word:  { currentWword.toUpperCase()}
     </div>
   )
 }

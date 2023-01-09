@@ -1,48 +1,60 @@
-*{
+* {
     background-color: rgb(241, 239, 237);
     padding: 1px;
-    margin:2vw;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-    
+    margin: 2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
 }
-.alert{
+
+.alert {
     background-color: transparent;
 }
-.alertMsg{
-    
+
+.alertMsg {
+
     justify-content: center;
     text-align: center;
 
     width: auto;
-    height:auto;
-    
+    height: auto;
+
 }
-.App{
+
+.App {
     padding: 1vw;
 }
-.wordData{
+
+.wordData {
     color: rgb(110, 110, 132);
     padding: 0;
     margin: 0;
 }
-.header-container{
-   padding: 0%;
+
+.header-container {
+    padding: 0%;
     justify-content: center;
     text-align: center;
 
 }
-.header-one{
+
+.header-one {
     padding-bottom: 0;
+    color: gray;
+
+
 }
-.header-two{
+
+.header-two {
     padding-top: 0;
+  color: gray;
 }
+
 .mb-3 {
     width: 10px;
 }
 
-.currWord,.phonetic,.interjection,.adjective,.source,.nounDefinition,.verbDefinition,.noInterjection,.noVerb,.noAdjective,.noNoun{
+.currWord, .phonetic, .interjection, .adjective, .source, .nounDefinition, .verbDefinition, .noInterjection, .noVerb, .noAdjective, .noNoun {
     list-style-type: none;
     padding: 0%;
     margin: 0;

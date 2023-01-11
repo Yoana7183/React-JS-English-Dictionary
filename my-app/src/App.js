@@ -14,10 +14,11 @@ function App() {
 		await fetch(url + value)
 			.then(response => response.json())
 			.then(data => setWord(data))
+			
 
 	}
-	console.log(word);
-
+	
+console.log(word);
 
 
 	return (

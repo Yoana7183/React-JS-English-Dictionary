@@ -4,6 +4,8 @@ import VerbDefinition from "./VerbDefinition"
 import CurrentWord from "./CurrentWord"
 import InterjectionDefinition from "./InterjectionDefinition"
 import AdjectiveDefinition from "./AdjectiveDefinition"
+import AdverbDefinition from "./AdverbDefinition"
+import ConjunctionDefiniton from "./ConjunctionDefiniton"
 import Source from "./Source"
 import Alert from 'react-bootstrap/Alert';
 
@@ -37,6 +39,8 @@ const Word = ({ word }) => {
                          <VerbDefinition word={word} />
                          <AdjectiveDefinition word={word}/>
                         <InterjectionDefinition word={word} />
+                        <AdverbDefinition word={word}/>
+                        <ConjunctionDefiniton word = {word}/>
                         <Source word={word} />    
                     </div>
                 );

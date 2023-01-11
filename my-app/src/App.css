@@ -1,7 +1,7 @@
 * {
     background-color: rgb(241, 239, 237);
     padding: 1px;
-    margin: 2vw;
+    margin: 1vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 
@@ -58,4 +58,10 @@
     list-style-type: none;
     padding: 0%;
     margin: 0;
+}
+.spanContainer{
+    width: auto;
+}
+.synonyms{
+    width: auto;
 }

@@ -8,40 +8,34 @@ import AdverbDefinition from "./AdverbDefinition"
 import ConjunctionDefiniton from "./ConjunctionDefiniton"
 import Source from "./Source"
 import Alert from 'react-bootstrap/Alert';
+import MappingComponentFunc from "./MappingComponentFunc"
+
 
 
 const Word = ({ word }) => {
     if (word.title === "No Definitions Found") {
         return (
-         <div className="alertMsg" >
-            <Alert variant="danger">
-              <Alert.Heading className = 'alert'>Hey, we cannot find definition for this word..</Alert.Heading>
-              <p className = 'alert'>
-              "Sorry pal, we couldn't find definitions for the word you were looking for.
-              </p>
-              <hr />
-              <p className="alert">
-              You can try the search again at later time or head to the web instead
-              </p>
-            </Alert>
+            <div className="alertMsg" >
+                <Alert variant="danger">
+                    <Alert.Heading className='alert'>Hey, we cannot find definition for this word..</Alert.Heading>
+                    <p className='alert'>
+                        "Sorry pal, we couldn't find definitions for the word you were looking for.
+                    </p>
+                    <hr />
+                    <p className="alert">
+                        You can try the search again at later time or head to the web instead
+                    </p>
+                </Alert>
             </div>
-          );
-         
+        );
+
     }
     return (
         <div>
             {word.map((word, index) => {
                 return (
                     <div className='wordData' key={index}>
-                        <CurrentWord word={word} />
-                        <Phonetic word={word} />
-                         <NounDefinition word={word} />
-                         <VerbDefinition word={word} />
-                         <AdjectiveDefinition word={word}/>
-                        <InterjectionDefinition word={word} />
-                        <AdverbDefinition word={word}/>
-                        <ConjunctionDefiniton word = {word}/>
-                        <Source word={word} />    
+                        <MappingComponentFunc word={word} />
                     </div>
                 );
 

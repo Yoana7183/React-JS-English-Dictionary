@@ -18,7 +18,7 @@ function App() {
 
 	}
 	
-console.log(word);
+console.dir(word);
 
 
 	return (

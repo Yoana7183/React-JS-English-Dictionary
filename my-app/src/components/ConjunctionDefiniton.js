@@ -1,5 +1,4 @@
 
-
 const ConjunctionDefiniton = ({word}) => {
   console.log(`word :${word}`);
   if (word.meanings[2] === undefined) {

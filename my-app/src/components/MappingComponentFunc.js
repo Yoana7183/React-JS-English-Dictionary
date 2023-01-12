@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from "react"
 import Phonetic from "./Phonetic"
 import NounDefinition from "./NounDefinition"
 import VerbDefinition from "./VerbDefinition"
@@ -20,14 +20,30 @@ import Source from "./Source"
 <Source word={word} /> */}
 
 const MappingComponentFunc = ({ word }) => {
+    let [nounObject, setnounObject] = useState("")
 
-    
-    console.log(`mapping function`)
-    console.dir(word)
+    // console.dir(word.meanings[0].partOfSpeech)
+
+    for (var i = 0; i < word.meanings.length; i++) {
+        for (var key in word.meanings[i]) {
+            for (var j = 0; j < word.meanings[i][key].length; j++) {
+                if (word.meanings[i][key] === "noun") {
+                    console.log(word.meanings[i]);
+                    let nounObject = word.meanings[i];
+                    setnounObject(nounObject)
+                    return;
+                }
+                // }if (word.meanings[i][key] === "verb") {
+                //     console.log('VERB IS FOUND');
+                // }
+            }
+        }
+    }
+
 
     return (
         <div>
-
+            <NounDefinition nounObject={nounObject} />
         </div>
     )
 }
